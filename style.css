@@ -1,0 +1,804 @@
+@font-face {
+    font-family: Merriweather regular;
+    src: url(./fonts/MerriweatherSans-Regular.ttf);
+}
+@font-face {
+    font-family: Merriweather light;
+    src: url(./fonts/MerriweatherSans-Light.ttf);
+}
+
+body::-webkit-scrollbar {
+    background-color: #1d1d1d;
+    width: 10px;
+
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #363636;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Merriweather regular;
+    hyphens: auto;
+    color: rgb(194, 194, 194);
+}
+
+
+aside {
+    grid-area: aside;
+}
+
+article {
+    grid-area: article;
+    padding-right: 60px;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: rgb(20, 20, 20);
+
+    flex: 1 0 auto;
+    display: grid;
+    grid-template-areas: 
+    
+    "aside article"
+    "footer footer";
+
+    grid-template-rows: 100% 1fr;
+    grid-template-columns: 430px 1fr;
+
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    height: 292px;
+    border-radius: 20px;
+    margin: 40px 30px 0 40px;
+    padding: 1rem 1rem 1rem 1rem;
+    justify-content: center;
+    
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+.profile img {
+    width: 40%;
+    border-radius: 100%;
+    border: 0.2rem solid rgb(194, 194, 194);
+    padding: 5px;
+}
+.imagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto h1 {
+    font-size: 130%;
+    text-align: center;
+    padding: 1rem;
+}
+
+.texto h2 {
+    font-size: 90%;
+    text-align: center;
+    font-family: Merriweather light;
+
+}
+.texto {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0rem;
+    font-size: 75%;
+}
+
+#links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 348px;
+    border-radius: 20px;
+    margin: 40px 30px 0 40px;
+    padding: 1rem 0 1rem 0;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+
+}
+
+#links p {
+    display: flex;
+    padding-left: 2rem;
+    align-items: center;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+
+}
+
+#links p img {
+    padding-right: 0.8rem;
+}
+
+
+#links a {
+    display: flex;
+    padding-left: 2rem;
+    align-items: center;
+    text-decoration: none;
+    color: currentColor;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+
+
+
+}
+
+#links a img {
+
+    padding-right: 0.8rem;
+
+
+}
+
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+    height: 348px;
+    border-radius: 20px;
+    margin: 40px 30px 0 40px;
+    padding: 1rem 0 1rem 0;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.tecnologias h2 {
+    font-size: 125%;
+    padding: 0.5rem 0 1rem 2rem;
+}
+
+#tecnologias {
+    display: flex;
+    justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#tecnologias p {
+    background-color: rgb(194, 194, 194);
+    color: rgb(0, 0, 0);
+    border-radius: 30px;
+    width: 86px;
+    height: 24px;
+    text-align: center;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
+    margin-right: 6px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 62.5%;
+}
+
+#educação {
+
+    display: flex;
+    flex-direction: column;
+    height: 348px;
+    border-radius: 20px;
+    margin: 40px 30px 0 40px;
+    padding: 1rem 0 1rem 0;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+#educação h2 {
+    font-size: 125%;
+    padding: 0.5rem 0 0.7rem 2rem;
+}
+
+.educação {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3rem;
+}
+
+.educação h3 {
+    font-size: 87.5%;
+    padding-top: 0.7rem;
+    font-weight: bold;
+}
+
+.educação h4 {
+
+    padding-bottom: 0.7rem;
+    font-size: 87.5%;
+    font-weight: normal;
+
+
+}
+
+.educação h5 {
+    font-family: Merriweather light;
+    font-weight: lighter;
+    font-size: 80%;
+
+}
+
+
+.meus-projetos {
+    display: flex;
+    align-items: center;
+    height: 86px;
+    border-radius: 20px;
+    margin: 40px 0 0 30px;
+    padding: 0rem 3rem;
+    justify-content: space-between;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.meus-projetos h2 {
+    font-size: 125%;
+}
+
+.meus-projetos a {
+    text-decoration: none;
+    font-size: 87.5%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(461px, 1fr));
+}
+
+
+main section:first-child {
+    margin-right: 0;
+}
+
+.projects {
+
+    height: 186px;
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: flex;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.content-project {
+    padding: 2rem 1rem 2rem 3rem;
+    width: 100%;
+
+    max-width: 461px;
+}
+
+.content-project h2 {
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+}
+
+.content-project h2 img {
+    margin-right: 1rem;
+}
+
+.text-project {
+    margin-top: 2rem;
+
+}
+
+.text-project p {
+    display: flex;
+    align-items: center;
+    font-size: 87.5%;
+}
+
+.text-project .imgs {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    width: 100%;
+
+}
+
+.text-project .imgs p {
+    margin-right: 1.5rem;
+}
+
+.text-project .imgs p img{
+    margin-right: 0.5rem;
+}
+
+
+.text-project .imgs p:last-child {
+    margin-left: 3rem;
+    margin-right: 0;
+}
+.biografia {
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    font-size: 100%;
+    padding: 2rem 3rem 2rem 3rem;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.biografia h2 {
+    font-size: 125%;
+}
+
+.biografia p {
+    margin-top: 1rem;
+    text-align: justify;
+    line-height: 25px;
+}
+
+
+.posts-recentes {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    margin: 40px 0 0 30px;
+    padding: 2rem 3rem 2rem 3rem;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+
+}
+
+.posts-recentes h2 {
+    font-size: 125%;
+
+}
+
+.posts {
+
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 40px;
+    display: flex;
+
+    background: rgb(31,31,31);
+    background: linear-gradient(90deg, rgba(31,31,31,1) 0%, rgba(19,19,19,1) 100%);
+}
+
+.posts h2 {
+    font-size: 112.5%;
+}
+
+.posts img {
+    width: 120px;
+    border-radius: 100%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.texto-post {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.texto-post h3 {
+    padding-top: 0.5rem;
+    font-family: Merriweather light;
+    font-size: 90%;
+}
+
+.texto-post p {
+    margin-top: 1rem;
+    font-size: 100%;
+    text-align: justify;
+    padding-right: 3rem;
+    line-height: 140%;
+}
+
+.texto-post p a {
+    text-decoration: none;
+    color: currentColor;
+    font-weight: bold;
+}
+
+footer {
+    flex-shrink: 0;
+    grid-area: footer;
+}
+
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: rgb(196, 196, 204);
+}
+
+@media screen and (min-width: 927px) and (max-width: 991px){
+    body {
+        grid-template-columns: 44% 1fr;
+    }
+
+    .educação h4 {
+        padding-right: 1rem;
+    }
+    #tecnologias p {
+        margin: 0 0.2rem 0 0.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .profile {
+        padding: 3rem 1rem;
+    }
+
+
+    .profile, #educação, #links {
+        height: auto;
+
+    }
+
+    #tecnologias p{
+        margin: 0 0.2rem 0 0.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .educação {
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 926px) {
+
+    body {
+        grid-template-columns: 45% 1fr;
+    }
+    .posts {
+        flex-direction: column;
+    }
+
+    .posts .imagem {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .texto-post {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 0;
+    }
+
+    .texto-post p {
+        padding-right: 0;
+    }
+
+    main {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .text-project .imgs p:last-child {
+        margin-left: 3vw;
+    }
+
+    .text-project p:first-child {
+        flex-wrap: wrap;
+    }
+    .text-project .imgs p {
+        margin-right: 1.5vw;
+    }
+
+
+    .projects {
+
+        height: auto;
+    }
+
+    .profile {
+        padding: 3rem 1rem;
+    }
+    .profile, #educação, #links {
+        height: auto;
+
+    }
+
+    #tecnologias p{
+        margin: 0 0.2rem 0 0.2rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .educação {
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+    .profile .imagem img {
+        width: 100px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .profile {
+        margin: 40px 40px 0 40px;
+    }
+
+    #links {
+        margin: 40px 40px 0 40px;
+    }
+
+    #links p {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #links a {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .tecnologias {
+        margin: 40px 40px 0 40px;
+
+    }
+
+    #educação {
+        margin: 40px 40px 0 40px;
+
+    }
+
+    .meus-projetos {
+        margin: 40px 40px 0 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .tecnologias h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    #educação h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .educação {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .projects {
+        margin: 40px 40px 0 40px;
+    }
+
+    main section:first-child {
+        margin-right: 40px;
+    }
+
+    .text-project .imgs p:last-child {
+        display: none;
+    }
+
+    .direita {
+        padding: 0;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .projects {
+        height: auto;
+    }
+
+    .content-project {
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    .text-project .imgs p {
+        margin-left: 0;
+        margin-right: 5vw;
+    }
+
+    .text-project .imgs p:last-child {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .text-project p:first-child {
+        flex-wrap: wrap;
+    }
+
+    .text-project .imgs {
+        font-size: 12px;
+    }
+
+    .text-project p img {
+        width: 15px;
+    }
+
+    
+    .biografia {
+        margin: 40px 40px 0 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+    .posts-recentes {
+        margin: 40px 40px 0 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+
+    }
+
+    .posts {
+        margin: 40px 40px 0 40px;
+        flex-direction: column;
+
+
+    }
+
+    .texto-post {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 0;
+
+    }
+
+    .posts .imagem {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .texto-post p {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    .profile .imagem img {
+        width: 120px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .profile {
+        margin: 40px 40px 0 40px;
+
+    }
+
+    .profile .texto h1{
+        font-size: 160%;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+    
+    .profile img {
+        width: 120px;
+    }
+
+    #links {
+        margin: 40px 40px 0 40px;
+        height: auto;
+        padding: 0;
+
+    }
+
+    .direita {
+        padding: 0;
+    }
+
+    .link {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #links .link a {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+
+    .tecnologias {
+        margin: 40px 40px 0 40px;
+        height: auto;
+
+    }
+
+    #tecnologias {
+        padding-bottom: 1rem;
+        justify-content: space-between;
+        padding: 0 4rem 1rem 4rem;
+    }
+
+    #tecnologias p {
+        font-size: 70%;
+        width: 100px;
+        height: 30px;
+    }
+
+    #educação {
+        margin: 40px 40px 0 40px;
+    }
+
+    .meus-projetos {
+        margin: 40px 40px 0 40px;
+    }
+
+    .projects {
+        margin: 40px 40px 0 40px;
+    }
+
+    main section:first-child {
+        margin-right: 40px;
+    }
+
+    .text-project .imgs p:last-child {
+        display: none;
+    }
+
+    .biografia {
+        margin: 40px 40px 0 40px;
+    }
+
+
+    .posts-recentes {
+        margin: 40px 40px 0 40px;
+
+    }
+
+    .posts {
+        margin: 40px 40px 0 40px;
+        flex-direction: column;
+
+    }
+
+    .texto-post {
+        padding: 0 2rem 0 2rem;
+    }
+
+    .posts .imagem {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .texto-post p {
+        padding-right: 0;
+        padding-bottom: 2rem;
+    }
+    
+}
